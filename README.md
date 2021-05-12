@@ -33,3 +33,21 @@ bfetch.onActiveRequestsChange = (activeRequests) => {
   showLoading(activeRequests > 0);
 };
 ```
+
+
+__Preset__
+```jsx
+const DefaultModification = {
+};
+```
+
+per-API<br/>
+API 실행별로 정책을 지정할 수 있습니다.<br/>
+몇몇 API는 성공하던, 실패하던 아예 중요하지 않을 수 있습니다. 이런 API들에 대해 글로벌 정책을 무시하고 아무런 메세지도 띄우지 않도록 할 수 있습니다.
+```jsx
+const TrivialApiPolicy = {
+  onError: () => {},
+};
+
+bfetch('POST', '/heartbeat', TrivialApiPolicy);
+```
