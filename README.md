@@ -1,6 +1,6 @@
 # bfetch
 
-네트워크 통신이 아니라 앱 개발에 특화된 fetch
+네트워크 통신이 아니라 앱 개발을 위한 fetch
 
 __Failure Decision__<br/>
 서버 프로토콜에 따라, http status code가 아닌 body의 내용에 따라서 에러로 처리해야하는 경우가 있습니다.<br/>
